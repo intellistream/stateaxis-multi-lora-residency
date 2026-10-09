@@ -1,0 +1,16 @@
+{
+  "schema_version": "stateaxis-mod-provenance/v1",
+  "source_repository": "Qixin-Gaoke/stateaxis",
+  "source_commit": "7562b5fa6f42e2e045a877b53ac934739e2cf230",
+  "source_issues": [
+    16,
+    103,
+    104,
+    105
+  ],
+  "source_evidence": "docs/history/reports/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
+  "copied_evidence": "evidence/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
+  "copied_evidence_sha256": "d447aab56db0c7a123508132dae578d9297f502f47cd7fc186f1fe1ed3d32e38",
+  "qualification_inherited": false,
+  "implementation_extracted": false
+}

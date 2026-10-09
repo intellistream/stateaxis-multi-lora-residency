@@ -1,0 +1,44 @@
+{
+  "schema_version": "vllm-hust-mod-metadata-v1",
+  "mod_id": "org.vllm-hust.stateaxis-multi-lora-residency",
+  "repository": "stateaxis-multi-lora-residency",
+  "display_name": "stateaxis-multi-lora-residency",
+  "canonical_repository": "https://github.com/intellistream/stateaxis-multi-lora-residency",
+  "responsibility": {
+    "organization": "intellistream",
+    "maintainers": [
+      {
+        "name": "Shuhao Zhang (Tony)",
+        "github": "ShuhaoZhangTony"
+      }
+    ],
+    "advisor_status": "not_declared",
+    "advisors": []
+  },
+  "lifecycle": {
+    "status": "experimental",
+    "default_enabled": false,
+    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
+    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+  },
+  "scope": {
+    "mechanism": "heterogeneous_multi_lora_residency",
+    "supported_workloads": [],
+    "out_of_scope": [
+      "general performance claims",
+      "automatic inheritance from StateAxis aggregate evidence"
+    ]
+  },
+  "evidence": {
+    "qualification": "unqualified",
+    "latest_result": "evidence/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
+    "index": "EVIDENCE.md",
+    "performance_claims": [
+      {
+        "label": "no-performance-claim",
+        "scope": "frozen StateAxis source evidence only",
+        "result": "The 8-adapter correctness foundation passed a 1+1 gate; no performance benefit is claimed."
+      }
+    ]
+  }
+}
