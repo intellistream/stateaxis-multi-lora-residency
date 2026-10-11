@@ -12,7 +12,7 @@
   "copied_evidence": "evidence/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
   "copied_evidence_sha256": "d447aab56db0c7a123508132dae578d9297f502f47cd7fc186f1fe1ed3d32e38",
   "qualification_inherited": false,
-  "implementation_extracted": false,
+  "implementation_extracted": true,
   "licensing": {
     "scaffolding": "Apache-2.0",
     "copied_evidence": "No additional license grant is inferred from this split."

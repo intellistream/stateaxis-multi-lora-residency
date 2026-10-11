@@ -1,56 +1,50 @@
 {
   "schema_version": "0.3-experimental",
   "extension_id": "org.vllm-hust.stateaxis-multi-lora-residency",
-  "extension_version": "0.1.0.dev0",
-  "kind": "in_process_plugin",
-  "host": {
-    "provider": "stateaxis",
-    "name": "stateaxis",
-    "version_range": ">=1,<2",
-    "api_range": ">=1,<2"
-  },
-  "runtime": {
-    "type": "python",
-    "process_scope": "stateaxis-process",
-    "isolation": "trusted_in_process"
-  },
+  "extension_version": "0.2.0",
+  "kind": "runtime_bridge",
+  "host": {"provider": "stateaxis", "name": "stateaxis", "version_range": ">=1,<2", "api_range": ">=1,<2"},
+  "runtime": {"type": "python", "process_scope": "stateaxis-process", "isolation": "trusted_in_process"},
   "lifecycle_owner": "vllm",
-  "protocols": [
-    {
-      "name": "stateaxis.mod-proposal.multi-lora-residency",
-      "version_range": ">=1,<2"
-    }
-  ],
-  "implementation": [
-    {
-      "type": "python_module",
-      "module": "stateaxis_multi_lora_residency",
-      "object": "StateaxisMultiLoraResidencyContractProposal",
-      "status": "import_only"
-    }
-  ],
+  "protocols": [{"name": "stateaxis.mod-proposal.multi-lora-residency", "version_range": ">=1,<2"}],
+  "implementation": [{"type": "host_builtin", "symbol": "statecentric_engine:parse_multi_lora_residency_additional_config", "status": "active"}],
   "requires_services": [],
   "requires_extensions": [],
-  "resource_claims": [],
-  "components": [
-    {
-      "component_id": "stateaxis-multi-lora-residency",
-      "contracts": [
-        "vllm.stateaxis.mod-proposal.multi-lora-residency.v1"
-      ],
-      "execution_planes": [
-        "scheduler",
-        "worker",
-        "device"
-      ],
-      "isolation": "trusted_in_process",
-      "implementation_ref": "stateaxis_multi_lora_residency:StateaxisMultiLoraResidencyContractProposal",
-      "permissions": []
-    }
-  ],
+  "resource_claims": [{"resource": "stateaxis.native.multi-lora-residency", "scope": "stateaxis-process", "mode": "exclusive"}],
+  "components": [{
+    "component_id": "stateaxis-multi-lora-residency",
+    "contracts": ["vllm.stateaxis.mod-proposal.multi-lora-residency.v1"],
+    "execution_planes": ["scheduler", "worker", "device"],
+    "isolation": "trusted_in_process",
+    "implementation_ref": "stateaxis_multi_lora_residency:multi_lora_residency",
+    "permissions": []
+  }],
   "activation": {
-    "entry_points": [],
+    "entry_points": [{"group": "stateaxis.mod_handlers", "name": "multi_lora_residency"}],
     "environment": {},
-    "additional_config": {}
+    "additional_config": {
+      "stateaxis_multi_lora_residency": {
+        "enabled": true,
+        "registry_path": "fixtures/qwen2.5-14b/registry.json",
+        "registry_sha256": "bb59cff873f26b2d1b44bc4e3cdcf553791f2d169ce33f03bdad2a06544b7765",
+        "worker_manifest_path": "fixtures/qwen2.5-14b/worker_manifest.tsv",
+        "worker_manifest_sha256": "7df47e29122d28326d28cd72f5d76436fe581d3006b1ff13653dd544a14c3d97",
+        "base_weights_sha256": "4ca9cbc269c4605424d3170d614f43854388b19bee70ade62c28ce054ee9033a",
+        "hbm_capacity_bytes": 67108864,
+        "host_capacity_bytes": 67108864,
+        "identity_bound": true,
+        "generation_bound": true,
+        "lease_safe_lru": true,
+        "strict_payload_sha256": true,
+        "fallback_to_base": true,
+        "fail_closed": true
+      },
+      "stateaxis_mod": {
+        "mod_id": "org.vllm-hust.stateaxis-multi-lora-residency",
+        "version": "0.2.0",
+        "manifest_sha256": "a70ed83105887e19b6f19286a4b9e87fa6dc244f86a2d04c858e595886e9101e",
+        "performance_qualified": false
+      }
+    }
   }
 }
