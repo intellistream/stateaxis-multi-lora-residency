@@ -18,12 +18,12 @@
   "lifecycle": {
     "status": "experimental",
     "default_enabled": false,
-    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
-    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+    "activation_contract": "Manifest 0.3 runtime_bridge; Extension Manager/ECPA is the sole activation path and StateAxis verifies the MOD, registry, worker manifest, payload, and base-weight identities.",
+    "rollback_contract": "Disable the extension. StateAxis then clears worker multi-LoRA variables and executes the unchanged base path."
   },
   "scope": {
     "mechanism": "heterogeneous_multi_lora_residency",
-    "supported_workloads": [],
+    "supported_workloads": ["Qwen2.5-14B BF16 lm_head LoRA, TP1/EP1, exact signed fixture"],
     "out_of_scope": [
       "general performance claims",
       "automatic inheritance from StateAxis aggregate evidence"
@@ -31,13 +31,13 @@
   },
   "evidence": {
     "qualification": "unqualified",
-    "latest_result": "evidence/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
+    "latest_result": "evidence/ecpa-contract-20261011/RESULT.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
         "label": "no-performance-claim",
         "scope": "frozen StateAxis source evidence only",
-        "result": "The 8-adapter correctness foundation passed a 1+1 gate; no performance benefit is claimed."
+        "result": "The 8-adapter correctness foundation passed a 1+1 gate; candidate throughput was 0.405% lower, so no performance benefit is claimed."
       }
     ]
   }

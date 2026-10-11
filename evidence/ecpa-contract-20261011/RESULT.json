@@ -1,0 +1,70 @@
+{
+  "schema_version": "stateaxis-mod-on-off/v1",
+  "date_utc": "2026-10-11",
+  "mod_id": "org.vllm-hust.stateaxis-multi-lora-residency",
+  "mod_version": "0.2.0",
+  "research_manifest_sha256": "a70ed83105887e19b6f19286a4b9e87fa6dc244f86a2d04c858e595886e9101e",
+  "evidence_label": "historical-real-npu-correctness-positive-performance-neutral-or-negative-plus-fresh-ecpa-contract",
+  "performance_qualified": false,
+  "host": {
+    "repository": "Qixin-Gaoke/stateaxis",
+    "pull_request": 509,
+    "merge_commit": "8a803b6c1bbaa182a329eaa1c58ae37136c47ac3",
+    "activation_mode": "active_experimental",
+    "direct_environment_activation_rejected": true,
+    "worker_environment_inheritance_cleared": true
+  },
+  "manager": {
+    "provider": "stateaxis",
+    "manifest_schema": "0.3-experimental",
+    "check": "passed_with_expected_experimental_degradation",
+    "plan": "passed",
+    "dry_run": "passed",
+    "managed_assembly_check_process": "passed",
+    "off_assembly_identity_sha256": "f1ab6e31e29267acb7d019adcbae2d97cff60a103bfe3174788136d8ec940c9c",
+    "on_assembly_identity_sha256": "da48ae10b42dce8134491e8f0878ac579a156816d592b4f6f9f19e7c5dd1d65e"
+  },
+  "frozen_artifact": {
+    "model": "Qwen2.5-14B BF16",
+    "topology": "TP1/EP1",
+    "execution_config_sha256": "09682f76a33b63dd5312aa7a0f7b43f9b2e1144cbd22c14ba952b9a9907e0815",
+    "artifact_identity_sha256": "f82b25e00bd40891a870987087ca285dbc6a7d8c42d19d2790b6328b30cac38f",
+    "weights_digest": "4ca9cbc269c4605424d3170d614f43854388b19bee70ade62c28ce054ee9033a",
+    "fixture_registry_sha256": "bb59cff873f26b2d1b44bc4e3cdcf553791f2d169ce33f03bdad2a06544b7765",
+    "fixture_worker_manifest_sha256": "7df47e29122d28326d28cd72f5d76436fe581d3006b1ff13653dd544a14c3d97",
+    "fixture_adapters": 2
+  },
+  "validation": {
+    "python_tests": "3 passed",
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "rust_library_tests": "421 passed",
+    "focused_registry_parser_dispatch_tests": "4 passed",
+    "cargo_check_lib_bins": "passed",
+    "native_state_engine_build": "passed",
+    "fixture_regeneration": "byte-identical"
+  },
+  "historical_real_npu_result": {
+    "hardware_execution": true,
+    "hardware": "Ascend 910B2 1+1",
+    "model": "Qwen2.5-14B BF16",
+    "adapters": 8,
+    "ranks": [4, 8, 16, 64],
+    "repetitions": 1,
+    "control_requests_per_second": 31.276969,
+    "candidate_requests_per_second": 31.150412,
+    "candidate_delta_percent": -0.405,
+    "exactness": "passed",
+    "lifecycle": "passed",
+    "authority_rows": "64/64",
+    "adapter_loads": 8,
+    "adapter_hits": 8,
+    "fallbacks": 0
+  },
+  "limitations": [
+    "the historical real-NPU observation has only one control and one candidate repetition",
+    "the observed throughput delta is negative and cannot support a positive performance claim",
+    "the result applies only to the frozen Qwen2.5-14B heterogeneous lm_head workload",
+    "fresh repeated matched real-online tests are required before performance qualification"
+  ]
+}
