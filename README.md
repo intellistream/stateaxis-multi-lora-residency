@@ -12,15 +12,23 @@ then provides bounded host/HBM residency with generation checks and lease-safe L
 
 ## Evidence boundary
 
-Status: **active experimental; correctness-positive, performance-unqualified**.
+Status: **active experimental; historical correctness-positive; historical
+single-pair performance-negative; current revision performance-unqualified**.
 
 The historical 8-adapter correctness foundation passed a 1+1 real-NPU gate. Candidate
-throughput was 31.150412 req/s versus 31.276969 req/s control (-0.405%), so no
-performance benefit is claimed. This result only describes that frozen workload.
+throughput was 31.150412 req/s versus 31.276969 req/s control (-0.405%). Candidate
+p50/p95 latency was 247.984/251.639 ms versus 74.301/202.862 ms control
+(+233.753%/+24.044%), and peak HBM was 64 MiB higher. This is a workload-scoped
+negative observation, not a general statement that heterogeneous multi-LoRA cannot
+help. It has one repetition per arm, so no uncertainty interval or stable performance
+claim is available. The current ECPA revision has not inherited this result and remains
+performance-unqualified.
 
-The copied evidence and its SHA-256 are recorded in `PROVENANCE.json`. Negative,
-failed, and inconclusive results are retained. Microbenchmarks and component results
-must not be restated as online end-to-end gains.
+The copied evidence and its SHA-256 are recorded in `PROVENANCE.json`. The compact
+machine-readable evidence bundle is under
+`evidence/issue16-multilora-20260816-r4/`, with interpretation in
+`RESULT.md`. Negative, failed, and inconclusive results are retained. Microbenchmarks
+and component results must not be restated as online end-to-end gains.
 
 ## Install and launch through ECPA
 

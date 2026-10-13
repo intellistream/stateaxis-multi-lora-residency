@@ -30,14 +30,14 @@
     ]
   },
   "evidence": {
-    "qualification": "unqualified",
-    "latest_result": "evidence/ecpa-contract-20261011/RESULT.json",
+    "qualification": "historical_real_npu_correctness_positive_single_pair_performance_negative_active_revision_unqualified",
+    "latest_result": "evidence/issue16-multilora-20260816-r4/RESULT.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
-        "label": "no-performance-claim",
-        "scope": "frozen StateAxis source evidence only",
-        "result": "The 8-adapter correctness foundation passed a 1+1 gate; candidate throughput was 0.405% lower, so no performance benefit is claimed."
+        "label": "historical-real-npu-single-pair-negative",
+        "scope": "frozen StateAxis source commit 0f5c17f; Qwen2.5-14B BF16 lm_head LoRA; TP1/EP1; 32 requests; 8 adapters; one fresh process per arm",
+        "result": "Candidate throughput was 31.150412 req/s versus 31.276969 req/s control (-0.405%); p50/p95 latency changed by +233.753%/+24.044%; peak HBM increased by 64 MiB. Exactness and authority passed, but one repetition per arm cannot qualify performance and the active ECPA revision does not inherit this result."
       }
     ]
   }
