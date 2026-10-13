@@ -1,0 +1,86 @@
+{
+  "base_weights_sha256": "4ca9cbc269c4605424d3170d614f43854388b19bee70ade62c28ce054ee9033a",
+  "files": {
+    "adapter-01.a.bf16": {
+      "bytes": 40960,
+      "sha256": "af660d2528c0df2d8f57520f3e4fa5e354ad6ed1e02df231b011825bcc077fdd"
+    },
+    "adapter-01.b.bf16": {
+      "bytes": 1216512,
+      "sha256": "f860202db48e08d7a9d8354d953c2c4fa0527b007818be52395526c97d7dd81b"
+    },
+    "adapter-02.a.bf16": {
+      "bytes": 81920,
+      "sha256": "27abf5f6d91cdc7809b78aadced6a1398c4323b15c1a34caf3692316896ed5ea"
+    },
+    "adapter-02.b.bf16": {
+      "bytes": 2433024,
+      "sha256": "e0bfadb84fe5cdff28e49e754b579601e38fe43873d685ee22e5098461894bc3"
+    },
+    "adapter-03.a.bf16": {
+      "bytes": 163840,
+      "sha256": "74fbc910919b245292b576b1268a088d4edc842ac871ed162f24dedd9f78880f"
+    },
+    "adapter-03.b.bf16": {
+      "bytes": 4866048,
+      "sha256": "b5f4f0f332ffe6c7b95f63a41849e0fbe956a91475775405499278b6edc89431"
+    },
+    "adapter-04.a.bf16": {
+      "bytes": 655360,
+      "sha256": "9466e4c66bb15409174000c0b27f43091657c576344c31fee33a2f622ba103ad"
+    },
+    "adapter-04.b.bf16": {
+      "bytes": 19464192,
+      "sha256": "7a86c3bd64673ca9db3d2afa38d1450a1f7bbcebcfa8574db3fd3a27f19ca320"
+    },
+    "adapter-05.a.bf16": {
+      "bytes": 40960,
+      "sha256": "af660d2528c0df2d8f57520f3e4fa5e354ad6ed1e02df231b011825bcc077fdd"
+    },
+    "adapter-05.b.bf16": {
+      "bytes": 1216512,
+      "sha256": "92ac96e2791fc42638f8edc3cdb171ac004d4ad8af7a3ba89d06f23a5168ecfa"
+    },
+    "adapter-06.a.bf16": {
+      "bytes": 81920,
+      "sha256": "27abf5f6d91cdc7809b78aadced6a1398c4323b15c1a34caf3692316896ed5ea"
+    },
+    "adapter-06.b.bf16": {
+      "bytes": 2433024,
+      "sha256": "197252ead3a6bec227b35db93728fbd55adea7c37cf6e264f8b2d1882007ce77"
+    },
+    "adapter-07.a.bf16": {
+      "bytes": 163840,
+      "sha256": "74fbc910919b245292b576b1268a088d4edc842ac871ed162f24dedd9f78880f"
+    },
+    "adapter-07.b.bf16": {
+      "bytes": 4866048,
+      "sha256": "f2ead466c92366b5649411ed2326cd92d920912f59d126131ae67b8789e5c907"
+    },
+    "adapter-08.a.bf16": {
+      "bytes": 655360,
+      "sha256": "9466e4c66bb15409174000c0b27f43091657c576344c31fee33a2f622ba103ad"
+    },
+    "adapter-08.b.bf16": {
+      "bytes": 19464192,
+      "sha256": "10570620ea529eac3ddb9e7811971e13df7fad49937d42f3f793841283967925"
+    },
+    "oracle.json": {
+      "bytes": 2072,
+      "sha256": "1ed5fe0c8dcd4fd797b10cfb8e8cc29476af38b5c270834ca0a1bd33b815115d"
+    },
+    "registry.json": {
+      "bytes": 7306,
+      "sha256": "a22de87286fd227d352b161a06bc25ff3ea62fa2d8b7138c9ba5031fbe0415cc"
+    },
+    "worker_manifest.tsv": {
+      "bytes": 2101,
+      "sha256": "30c692d3bb8655803063d8b94a79dc28b0fc2970a17b6dbd89c7362c66d9a207"
+    },
+    "workload.json": {
+      "bytes": 7643,
+      "sha256": "6285d34e2cb0de85d4f1f657ff9d5e47d8eab70a04ab3557c229ee11efe3bd11"
+    }
+  },
+  "schema_version": 1
+}

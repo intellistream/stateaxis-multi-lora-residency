@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "evidence_label": "historical-real-npu-single-pair-negative",
+  "source_commit": "0f5c17f0388ef52fb0ddfead30af81aa221c7b91",
+  "model": "Qwen2.5-14B BF16",
+  "topology": "TP1/EP1",
+  "physical_npu": 3,
+  "workload": {
+    "requests": 32,
+    "output_tokens_per_request": 2,
+    "adapters": 8,
+    "ranks": [4, 8, 16, 64, 4, 8, 16, 64]
+  },
+  "repetitions_per_arm": 1,
+  "exactness": "pass",
+  "authority": {
+    "control_applied_rows": 64,
+    "candidate_applied_rows": 64,
+    "fallback_count": 0
+  },
+  "control": {
+    "request_per_s": 31.2769694832544,
+    "output_token_per_s": 62.5539389665088,
+    "latency_p50_ms": 74.30147,
+    "latency_p95_ms": 202.862141,
+    "hbm_peak_used_mib": 58569
+  },
+  "candidate": {
+    "request_per_s": 31.150411829178875,
+    "output_token_per_s": 62.30082365835775,
+    "latency_p50_ms": 247.983651,
+    "latency_p95_ms": 251.638556,
+    "hbm_peak_used_mib": 58633
+  },
+  "delta": {
+    "request_per_s_percent": -0.40463528329778287,
+    "output_token_per_s_percent": -0.40463528329778287,
+    "latency_p50_percent": 233.75335777340612,
+    "latency_p95_percent": 24.04411920309959,
+    "hbm_peak_used_mib": 64
+  },
+  "performance_claim": false,
+  "classification": "workload-scoped historical negative observation; current ECPA revision unqualified",
+  "limitations": [
+    "one repetition per arm; no confidence interval or significance claim",
+    "historical source commit differs from the active ECPA revision",
+    "result covers only the frozen 32-request, eight-adapter lm_head workload"
+  ]
+}

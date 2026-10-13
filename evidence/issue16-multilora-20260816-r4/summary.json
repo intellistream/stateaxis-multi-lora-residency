@@ -1,0 +1,79 @@
+{
+  "candidate_latency_p95_delta": 0.2404411920309959,
+  "candidate_request_throughput_delta": -0.004046352832977829,
+  "conclusion": "1+1 correctness/authority gate only; no performance conclusion",
+  "exact": true,
+  "format": "statecentric-issue16-multilora-summary-v1",
+  "lifecycle_exact": true,
+  "performance_claim": false,
+  "repetitions_per_arm": 1,
+  "rows": [
+    {
+      "arm": "candidate",
+      "authority_applied_rows": 64,
+      "cache_hits": 8,
+      "evictions": 0,
+      "fallback_count": 0,
+      "hbm_peak_used_mib": 58633,
+      "host_bytes_max": 57843712,
+      "identity_set_sha256": "bbc7eb01e9c455d912c0a65487cb47d51a4072d23134d13d714fd19313b8b869",
+      "latency_p50_ms": 247.983651,
+      "latency_p95_ms": 251.638556,
+      "loads": 8,
+      "max_adapter_segments": 8,
+      "max_physical_batch_rows": 32,
+      "output_token_per_s": 62.30082365835775,
+      "physical_batch_contract_passed": true,
+      "repetition": 1,
+      "request_per_s": 31.150411829178875,
+      "resident_bytes_max": 57843712,
+      "telemetry_records": 2,
+      "workload_sha256": "6285d34e2cb0de85d4f1f657ff9d5e47d8eab70a04ab3557c229ee11efe3bd11"
+    },
+    {
+      "arm": "control",
+      "authority_applied_rows": 64,
+      "cache_hits": 8,
+      "evictions": 0,
+      "fallback_count": 0,
+      "hbm_peak_used_mib": 58569,
+      "host_bytes_max": 57843712,
+      "identity_set_sha256": "bbc7eb01e9c455d912c0a65487cb47d51a4072d23134d13d714fd19313b8b869",
+      "latency_p50_ms": 74.30147,
+      "latency_p95_ms": 202.862141,
+      "loads": 8,
+      "max_adapter_segments": 1,
+      "max_physical_batch_rows": 4,
+      "output_token_per_s": 62.5539389665088,
+      "physical_batch_contract_passed": true,
+      "repetition": 1,
+      "request_per_s": 31.2769694832544,
+      "resident_bytes_max": 57843712,
+      "telemetry_records": 16,
+      "workload_sha256": "6285d34e2cb0de85d4f1f657ff9d5e47d8eab70a04ab3557c229ee11efe3bd11"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "candidate": {
+      "authority_applied_rows_total": 64,
+      "fallback_count_total": 0,
+      "hbm_peak_used_mib_max": 58633,
+      "latency_p50_ms_median": 247.983651,
+      "latency_p95_ms_median": 251.638556,
+      "output_token_per_s_median": 62.30082365835775,
+      "request_per_s_median": 31.150411829178875,
+      "runs": 1
+    },
+    "control": {
+      "authority_applied_rows_total": 64,
+      "fallback_count_total": 0,
+      "hbm_peak_used_mib_max": 58569,
+      "latency_p50_ms_median": 74.30147,
+      "latency_p95_ms_median": 202.862141,
+      "output_token_per_s_median": 62.5539389665088,
+      "request_per_s_median": 31.2769694832544,
+      "runs": 1
+    }
+  }
+}

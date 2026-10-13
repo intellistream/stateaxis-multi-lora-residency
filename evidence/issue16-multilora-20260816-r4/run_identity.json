@@ -1,0 +1,13 @@
+{
+  "execution_artifact_identity_sha256": "64fc253139d901837cb534d77f6bdb70ad642b5d3962707ed164e39e4d7af94e",
+  "fixture_identity_manifest_sha256": "d37af3794b517f3724b5a00aff48cdd759629a81bc51e3498149640a7d6a1193",
+  "format": "statecentric-issue16-multilora-run-identity-v4",
+  "generic_runner_sha256": "a208922623ba4fcad3418643f76e4cfe9e8dfd1b6e40780edf53d60b3e09a5c7",
+  "official_image": "quay.io/ascend/vllm-ascend:v0.23.0rc1-openeuler",
+  "official_image_id": "sha256:f4c89c293e076453e9eef9edb5fb9669740dccbd3c48619a9f976d775fc29b81",
+  "outer_runner_sha256": "3ad2fbe2b3eee9817da2b18dedcf2aec5a714821cba7c384cdd3c46dcecd48af",
+  "schema_version": 1,
+  "server_binary_sha256": "8317e330d575a41cd3ffb638e535a7d070a469ab87f7de2522bb9578062132d9",
+  "source_commit": "0f5c17f0388ef52fb0ddfead30af81aa221c7b91",
+  "worker_binary_sha256": "f5630c95b830e66a2e8bfac6937b905e6279a05bca853c42983b471521af56f5"
+}

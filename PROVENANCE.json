@@ -11,6 +11,9 @@
   "source_evidence": "docs/history/reports/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
   "copied_evidence": "evidence/ISSUE16_MULTILORA_FOUNDATION_20260816.md",
   "copied_evidence_sha256": "d447aab56db0c7a123508132dae578d9297f502f47cd7fc186f1fe1ed3d32e38",
+  "machine_readable_evidence": "evidence/issue16-multilora-20260816-r4",
+  "machine_readable_source": "results/issue16-multilora-20260816-r4-gate",
+  "machine_readable_sha256_inventory": "evidence/issue16-multilora-20260816-r4/SHA256SUMS",
   "qualification_inherited": false,
   "implementation_extracted": true,
   "licensing": {

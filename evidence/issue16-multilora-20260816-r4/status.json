@@ -1,0 +1,10 @@
+{
+  "completed": true,
+  "exit_code": 0,
+  "foreign_resources_modified": false,
+  "format": "statecentric-issue16-multilora-status-v4",
+  "performance_claim": false,
+  "physical_npu": 3,
+  "repetitions_per_arm": 1,
+  "schema_version": 1
+}
